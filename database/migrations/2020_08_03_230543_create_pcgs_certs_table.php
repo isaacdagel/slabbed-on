@@ -17,7 +17,8 @@ class CreatePcgsCertsTable extends Migration
             $table->id();
             $table->integer('cert_range_start')->unique();
             $table->integer('cert_range_end')->unique()->nullable();
-            $table->date('date');
+            $table->date('date_range_start');
+            $table->date('date_range_end')->nullable();
         });
     }
 
