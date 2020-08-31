@@ -15,7 +15,8 @@ class CreateNgcCertsTable extends Migration
     {
         Schema::create('ngc_certs', function (Blueprint $table) {
             $table->id();
-            $table->integer('cert')->unique();
+            $table->integer('invoice_num');
+            $table->integer('line_num');
             $table->date('date');
         });
     }

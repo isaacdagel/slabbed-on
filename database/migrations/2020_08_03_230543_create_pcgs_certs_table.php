@@ -15,8 +15,7 @@ class CreatePcgsCertsTable extends Migration
     {
         Schema::create('pcgs_certs', function (Blueprint $table) {
             $table->id();
-            $table->integer('cert_range_start')->unique();
-            $table->integer('cert_range_end')->unique()->nullable();
+            $table->integer('cert_id');
             $table->date('date_range_start');
             $table->date('date_range_end')->nullable();
         });
